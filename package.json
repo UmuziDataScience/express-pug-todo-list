@@ -1,12 +1,11 @@
 {
-  "name": "express-pug-playground",
+  "name": "express-pug-todo-list",
   "version": "1.0.0",
-  "description": "reneszabo/express-pug-playground",
+  "description": "reneszabo/express-pug-todo-list",
   "license": "MIT",
-  "homepage": "https://cudddle.herokuapp.com/",
   "repository": {
     "type": "git",
-    "url": "git@github.com:reneszabo/express-pug-playground.git"
+    "url": "git@github.com:reneszabo/express-pug-todo-list.git"
   },
   "author": {
     "name": "Rene Ramirez",

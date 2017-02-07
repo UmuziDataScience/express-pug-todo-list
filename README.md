@@ -1,6 +1,5 @@
-# express-pug-playground
+# express-pug-todo-list
 
-[Demo - Cudddle in Heroku](https://cudddle.herokuapp.com/)
 
 ## Install Packages
 
@@ -21,3 +20,4 @@ $ npm start
 -   [bootstrap-sass](https://www.npmjs.com/package/bootstrap-sass)
 -   [Waypoints](http://imakewebthings.com/waypoints/)
 -   [Fontawesome](http://fontawesome.io/icons/)
+-   [Socket.io](http://socket.io/)
