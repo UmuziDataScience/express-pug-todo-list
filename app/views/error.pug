@@ -1,0 +1,14 @@
+extends ./layout
+block content
+    section#error
+        div.container
+            div.text-center
+                img(src='img/404.jpg' alt='Adopt Me - dog')
+                h1= message
+                h5 It happens, let me help you
+                div.start
+                    a(href='/') back to homepage
+            if error.stack
+                div
+                    h2= error.status
+                    pre #{error.stack}

@@ -1,0 +1,34 @@
+extends ./layout
+block append scripts
+    script(src='js/home.js')
+block content
+    section#todo
+        div.container
+            div#form-container
+                form#form.form(action="/api/tasks", method='POST')
+                    div.form-group.form-group-title
+                        label(for='task-title') Title
+                        input#task-title.form-control(name="title", type="text", placeholder="e.g.: Pick up dry cleaners on the way home", aria-describedby="help-task-name")
+                        span#help-task-name.help-block
+                    div.form-group.form-description.hidden
+                        label(for='task-descripton') Description
+                        textarea#task-descripton.form-control(name="description", row="3", placeholder="e.g.: Pick up dry cleaners on the way home", aria-describedby="help-task-description", style="resize:vertical ;")
+                        span#help-task-description.help-block
+                    div.form-group.text-right
+                        button.btn.btn-link.toggle-description(type='button') toggle description
+                        button.btn.btn-info(type='submit') save
+            h2.text-primary TO-DO
+            hr
+            div#tasks-container
+            h2.text-primary DONE
+            hr
+            div#tasks-container-done
+    div#templates.hidden
+        div#task.task
+            div.row
+                div.col-md-9
+                    h3.title title of the task
+                    p.description description of the task
+                div.col-md-3.text-right
+                    a.status(href='#status') mark as done
+                    a.delete(href='#delete') delete

@@ -1,0 +1,161 @@
+// Default navbar
+.navbar-cudddle {
+  background-color: $navbar-cudddle-bg;
+  border-color: $navbar-cudddle-border;
+  min-height: $navbar-cudddle-height;
+  transition-property: background-color, border-color;
+  transition-timing-function: ease;
+  transition-duration: 0.4s;
+  .navbar-brand {
+    padding: $navbar-padding-vertical $navbar-padding-horizontal;
+    margin-top: (($navbar-cudddle-height - 60px) / 2);
+    margin-bottom: (($navbar-cudddle-height - 60px) / 2);
+    font-size: $navbar-cudddle-font-size;
+    line-height: $navbar-cudddle-line-height-computed;
+    height: $navbar-cudddle-line-height-computed;
+    color: $navbar-cudddle-brand-color;
+    font-family: $headings-font-family;
+    &:hover,
+    &:focus {
+      color: $navbar-default-brand-hover-color;
+      background-color: $navbar-default-brand-hover-bg;
+    }
+  }
+  &.cudddle-top-hide{
+    border-color: transparent;
+    background-color: transparent;
+  }
+  .navbar-text {
+    color: $navbar-default-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: $navbar-cudddle-link-color;
+      margin-top: (($navbar-cudddle-height - 34px) / 2);
+      margin-bottom: (($navbar-cudddle-height - 34px) / 2);
+      font-weight: lighter;
+      &:hover,
+      &:focus {
+        color: $navbar-default-link-hover-color;
+        background-color: $navbar-default-link-hover-bg;
+        text-decoration: underline;
+      }
+      &.cudddle-link-cta {
+        color: $brand-danger;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-default-link-active-color;
+        background-color: $navbar-default-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-default-link-disabled-color;
+        background-color: $navbar-default-link-disabled-bg;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    border-color: $navbar-cudddle-toggle-border-color;
+    margin-top: (($navbar-cudddle-height - 34px) / 2);
+    margin-bottom: (($navbar-cudddle-height - 34px) / 2);
+    border-radius: 0;
+    &:hover,
+    &:focus {
+      background-color: $navbar-default-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: $navbar-default-toggle-icon-bar-bg;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $navbar-cudddle-border;
+  }
+
+  .navbar-collapse {
+    &.in, &.collapsing {
+      background-color: $navbar-cudddle-bg;
+    }
+  }
+
+  // Dropdown menu items
+  .navbar-nav {
+
+    // Remove background color from open dropdown
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $navbar-default-link-active-bg;
+        color: $navbar-default-link-active-color;
+      }
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      // Dropdowns get custom display when collapsed
+      .open .dropdown-menu {
+        > li > a {
+          color: $navbar-cudddle-link-color;
+          &:hover,
+          &:focus {
+            color: $navbar-default-link-hover-color;
+            background-color: $navbar-default-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-default-link-active-color;
+            background-color: $navbar-default-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-default-link-disabled-color;
+            background-color: $navbar-default-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+
+  // Links in navbars
+  //
+  // Add a class to ensure links outside the navbar nav are colored correctly.
+
+  .navbar-link {
+    color: $navbar-cudddle-link-color;
+    &:hover {
+      color: $navbar-default-link-hover-color;
+    }
+  }
+
+  .btn-link {
+    color: $navbar-cudddle-link-color;
+    &:hover,
+    &:focus {
+      color: $navbar-default-link-hover-color;
+    }
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:focus {
+        color: $navbar-default-link-disabled-color;
+      }
+    }
+  }
+}

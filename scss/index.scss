@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+$icon-font-path: '../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+@import './partials/variables';
+// Core variables and mixins
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+
+// Reset and dependencies
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/print';
+
+// Core CSS
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/type';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/code';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tables';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons';
+
+// Components
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/component-animations';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/button-groups';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-groups';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navs';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navbar';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/labels';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/badges';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/alerts';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/wells';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/close';
+
+// Components w/ JavaScript
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/modals';
+
+// Utility classes
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities';
+@import '../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities';
+
+@import './partials/form';
+@import './partials/fonts';
+@import './partials/navbar';
+@import './partials/buttons';
+body{
+  margin-top: $navbar-cudddle-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: $gray-lighter 0px 1px 1px;
+  transition-property: opacity;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+  opacity: 0;
+  &.loaded{
+    opacity: 1;
+  }
+}
+
+section{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+
+#error{
+  img{
+    max-width: 680px;
+    width: 100%;
+    border-bottom: 2px $gray-dark solid;
+  }
+}
+.task{
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 15px;
+  .col-md-3{
+    padding-top: 25px;
+    a:last-child{
+      margin-left: 35px;
+      display: inline-block;
+    }
+  }
+  .description{
+    color: #a1a1a1;
+  }
+}
